@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUVEA — Tienda Premium</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script>guardAuth();</script>
+</head>
+<body>
+
+  <!-- ====================================================
+       NAVBAR
+       ==================================================== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="3" fill="#1A1917"/><path d="M7 8v12M7 8l14 12M21 8v12" stroke="#FAFAF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        
+      </svg>
+      <span class="nav-brand-name">uvea</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="pages/moda.html">Moda</a></li>
+      <li><a href="pages/electronica.html">Electrónica</a></li>
+      <li><a href="pages/hogar.html">Hogar</a></li>
+    </ul>
+
+    <a href="cart.html" class="nav-cart" aria-label="Carrito">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      <span class="cart-badge"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="btn-logout" onclick="authLogout()">Cerrar sesión</button>
+  </nav>
+
+  <!-- ====================================================
+       MAIN
+       ==================================================== -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-eyebrow">Colección 2026</p>
+      <h1 class="hero-title">Lo esencial, <em>refinado</em></h1>
+      <p class="hero-subtitle">
+        Una selección curada de productos premium para quienes valoran la calidad sobre la cantidad.
+      </p>
+      <a href="pages/moda.html" class="hero-cta">Explorar colección</a>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section">
+      <div class="container">
+        <p class="section-label">Categorías</p>
+
+        <div class="categories-grid">
+
+          <a href="pages/moda.html" class="category-card">
+            <span class="cat-num">01</span>
+            <h2 class="cat-title">Moda</h2>
+            <span class="cat-tag">Ropa &amp; Estilo</span>
+            <p class="cat-desc">
+              Piezas atemporales seleccionadas para una guardarropa consciente y refinada.
+            </p>
+            <span class="cat-arrow">&#8594;</span>
+          </a>
+
+          <a href="pages/electronica.html" class="category-card">
+            <span class="cat-num">02</span>
+            <h2 class="cat-title">Electrónica</h2>
+            <span class="cat-tag">Tecnología &amp; Dispositivos</span>
+            <p class="cat-desc">
+              Hardware y accesorios tech de alta gama para la productividad y el entretenimiento.
+            </p>
+            <span class="cat-arrow">&#8594;</span>
+          </a>
+
+          <a href="pages/hogar.html" class="category-card">
+            <span class="cat-num">03</span>
+            <h2 class="cat-title">Hogar</h2>
+            <span class="cat-tag">Diseño &amp; Decoración</span>
+            <p class="cat-desc">
+              Objetos y muebles que elevan cada espacio con diseño contemporáneo y materiales nobles.
+            </p>
+            <span class="cat-arrow">&#8594;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer>
+    <span class="footer-brand">Nuvea</span>
+    <span>&copy; 2026 NUVEA. Todos los derechos reservados.</span>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUVEA — Hogar</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/auth.js"></script>
+  <script src="../js/cart.js"></script>
+  <script>guardAuth();</script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="3" fill="#1A1917"/><path d="M7 8v12M7 8l14 12M21 8v12" stroke="#FAFAF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        
+      </svg>
+      <span class="nav-brand-name">uvea</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="moda.html">Moda</a></li>
+      <li><a href="electronica.html">Electrónica</a></li>
+      <li><a href="hogar.html" class="active">Hogar</a></li>
+    </ul>
+    <a href="../cart.html" class="nav-cart" aria-label="Carrito">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      <span class="cart-badge"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="btn-logout" onclick="authLogout()">Cerrar sesión</button>
+  </nav>
+
+  <main>
+
+    <section class="cat-hero container">
+      <p class="cat-hero-store">NUVEA · Categoría</p>
+      <h1 class="cat-hero-title">Hogar</h1>
+      <p class="cat-hero-sub">
+        Objetos y muebles que elevan cada espacio. Diseño contemporáneo
+        en materiales nobles, pensados para durar una generación.
+      </p>
+    </section>
+
+    <section class="products-section">
+      <div class="container">
+        <p class="section-label">Productos</p>
+
+        <div class="products-grid">
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-h1/600/800" alt="Lámpara de Piso Arco" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Lámpara de Piso Arco</h3>
+            <p class="product-price">$154.000</p>
+            <span class="product-tag">Nuevo</span>
+            <button class="product-btn" data-id="nuvea-h1" data-name="Lámpara de Piso Arco" data-price="154000">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-h2/600/800" alt="Cojín Boucle Natural" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Cojín Boucle Natural</h3>
+            <p class="product-price">$28.900</p>
+            <span class="product-tag">Colección</span>
+            <button class="product-btn" data-id="nuvea-h2" data-name="Cojín Boucle Natural" data-price="28900">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-h3/600/800" alt="Jarrón Cerámica Mate" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Jarrón Cerámica Mate</h3>
+            <p class="product-price">$42.500</p>
+            <span class="product-tag">Destacado</span>
+            <button class="product-btn" data-id="nuvea-h3" data-name="Jarrón Cerámica Mate" data-price="42500">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-h4/600/800" alt="Bandeja Mármol Blanco" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Bandeja Mármol Blanco</h3>
+            <p class="product-price">$56.000</p>
+            <span class="product-tag">Nuevo</span>
+            <button class="product-btn" data-id="nuvea-h4" data-name="Bandeja Mármol Blanco" data-price="56000">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-h5/600/800" alt="Espejo Oval Ratán" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Espejo Oval Ratán</h3>
+            <p class="product-price">$98.000</p>
+            <span class="product-tag">Destacado</span>
+            <button class="product-btn" data-id="nuvea-h5" data-name="Espejo Oval Ratán" data-price="98000">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-h6/600/800" alt="Set Copas Borosilicato" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Set Copas Borosilicato</h3>
+            <p class="product-price">$34.500</p>
+            <span class="product-tag">Colección</span>
+            <button class="product-btn" data-id="nuvea-h6" data-name="Set Copas Borosilicato" data-price="34500">Agregar al carrito</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-brand">Nuvea</span>
+    <span>&copy; 2026 NUVEA. Todos los derechos reservados.</span>
+  </footer>
+
+</body>
+</html>

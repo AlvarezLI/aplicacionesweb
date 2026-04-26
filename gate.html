@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUVEA</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/auth.js"></script>
+  <script>
+    /* Si ya hay sesión, ir directo al home */
+    if (isLoggedIn()) window.location.replace('index.html');
+  </script>
+</head>
+<body class="gate-body">
+
+  <div class="gate-wrap">
+
+    <!-- Contenido -->
+    <div class="gate-content">
+
+      <div class="gate-brand">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="3" fill="#1A1917"/><path d="M7 8v12M7 8l14 12M21 8v12" stroke="#FAFAF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          
+        </svg>
+        <span class="gate-brand-name">uvea</span>
+      </div>
+
+      <p class="gate-eyebrow">Bienvenido</p>
+      <h1 class="gate-title">Lo esencial,<br/><em>refinado</em></h1>
+      <p class="gate-sub">
+        Para explorar nuestra selección de productos, primero
+        identificate con tu cuenta.
+      </p>
+
+      <div class="gate-actions">
+        <a href="register.html" class="gate-btn-primary">Crear cuenta</a>
+        <a href="login.html"    class="gate-btn-secondary">Iniciar sesión</a>
+      </div>
+
+    </div>
+
+    <!-- Panel visual -->
+    <div class="gate-visual" aria-hidden="true">
+      <p class="gate-visual-text">
+        Nuvea<br/>
+        Premium<br/>
+        Lifestyle
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

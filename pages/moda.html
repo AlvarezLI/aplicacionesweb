@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUVEA — Moda</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/auth.js"></script>
+  <script src="../js/cart.js"></script>
+  <script>guardAuth();</script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="28" height="28" rx="3" fill="#1A1917"/><path d="M7 8v12M7 8l14 12M21 8v12" stroke="#FAFAF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        
+      </svg>
+      <span class="nav-brand-name">uvea</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="moda.html" class="active">Moda</a></li>
+      <li><a href="electronica.html">Electrónica</a></li>
+      <li><a href="hogar.html">Hogar</a></li>
+    </ul>
+    <a href="../cart.html" class="nav-cart" aria-label="Carrito">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      <span class="cart-badge"></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="btn-logout" onclick="authLogout()">Cerrar sesión</button>
+  </nav>
+
+  <main>
+
+    <section class="cat-hero container">
+      <p class="cat-hero-store">NUVEA · Categoría</p>
+      <h1 class="cat-hero-title">Moda</h1>
+      <p class="cat-hero-sub">
+        Piezas atemporales seleccionadas para una guardarropa consciente y refinada.
+        Calidad de confección sin concesiones estéticas.
+      </p>
+    </section>
+
+    <section class="products-section">
+      <div class="container">
+        <p class="section-label">Productos</p>
+
+        <div class="products-grid">
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-m1/600/800" alt="Blazer Estructurado" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Blazer Estructurado</h3>
+            <p class="product-price">$89.900</p>
+            <span class="product-tag">Nuevo</span>
+            <button class="product-btn" data-id="nuvea-m1" data-name="Blazer Estructurado" data-price="89900">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-m2/600/800" alt="Vestido Lino Natural" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Vestido Lino Natural</h3>
+            <p class="product-price">$67.500</p>
+            <span class="product-tag">Destacado</span>
+            <button class="product-btn" data-id="nuvea-m2" data-name="Vestido Lino Natural" data-price="67500">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-m3/600/800" alt="Camisa Oxford" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Camisa Oxford</h3>
+            <p class="product-price">$45.000</p>
+            <span class="product-tag">Colección</span>
+            <button class="product-btn" data-id="nuvea-m3" data-name="Camisa Oxford" data-price="45000">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-m4/600/800" alt="Pantalón Wool Blend" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Pantalón Wool Blend</h3>
+            <p class="product-price">$72.000</p>
+            <span class="product-tag">Nuevo</span>
+            <button class="product-btn" data-id="nuvea-m4" data-name="Pantalón Wool Blend" data-price="72000">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-m5/600/800" alt="Trench Coat Clásico" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Trench Coat Clásico</h3>
+            <p class="product-price">$134.000</p>
+            <span class="product-tag">Destacado</span>
+            <button class="product-btn" data-id="nuvea-m5" data-name="Trench Coat Clásico" data-price="134000">Agregar al carrito</button>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img">
+              <img src="https://picsum.photos/seed/nuvea-m6/600/800" alt="Camiseta Premium Pima" loading="lazy"/>
+            </div>
+            <h3 class="product-name">Camiseta Premium Pima</h3>
+            <p class="product-price">$28.500</p>
+            <span class="product-tag">Colección</span>
+            <button class="product-btn" data-id="nuvea-m6" data-name="Camiseta Premium Pima" data-price="28500">Agregar al carrito</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-brand">Nuvea</span>
+    <span>&copy; 2026 NUVEA. Todos los derechos reservados.</span>
+  </footer>
+
+</body>
+</html>
