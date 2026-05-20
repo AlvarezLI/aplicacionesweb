@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NUVEA — Iniciar sesión</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <script src="js/auth.js"></script>
-  <script>
-    /* Si ya hay sesión activa, redirigir al home */
-    if (isLoggedIn()) window.location.replace('index.html');
-  </script>
 </head>
 <body>
 
@@ -17,7 +12,6 @@
     <a href="gate.html" class="nav-brand">
       <svg class="nav-logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="28" height="28" rx="3" fill="#1A1917"/><path d="M7 8v12M7 8l14 12M21 8v12" stroke="#FAFAF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        
       </svg>
       <span class="nav-brand-name">uvea</span>
     </a>
@@ -100,14 +94,19 @@
     </div>
   </main>
 
+  <script src="js/auth.js"></script>
   <script>
+    if (isLoggedIn()) window.location.replace('index.html');
+
+    initNav();
+
     document.getElementById('loginForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      const email    = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value;
-      const errorEl  = document.getElementById('loginError');
+      var email    = document.getElementById('email').value.trim();
+      var password = document.getElementById('password').value;
+      var errorEl  = document.getElementById('loginError');
 
-      const result = authLogin(email, password);
+      var result = authLogin(email, password);
 
       if (result.ok) {
         window.location.href = 'index.html';
@@ -117,9 +116,8 @@
       }
     });
 
-    /* Ocultar error al escribir */
-    ['email', 'password'].forEach(id => {
-      document.getElementById(id).addEventListener('input', () => {
+    ['email', 'password'].forEach(function (id) {
+      document.getElementById(id).addEventListener('input', function () {
         document.getElementById('loginError').classList.remove('visible');
       });
     });

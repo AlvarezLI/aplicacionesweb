@@ -36,10 +36,10 @@ function authRegister(data) {
   return { ok: true };
 }
 
-/* Cierra sesión y redirige al gate */
+/* Cierra sesión y redirige al login */
 function authLogout() {
   sessionStorage.removeItem(_S);
-  window.location.href = _root() + 'gate.html';
+  window.location.href = _root() + 'login.html';
 }
 
 /* Llama esto en páginas protegidas: redirige si no hay sesión */
@@ -73,5 +73,3 @@ function initNav() {
     })
   );
 }
-
-document.addEventListener('DOMContentLoaded', initNav);

@@ -811,6 +811,50 @@ button.btn-logout {
 .form-error.visible { display: block; }
 
 /* ==========================================================
+   PRODUCT CARD — DESCRIPTION & QUANTITY CONTROLS
+   ========================================================== */
+
+.product-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.65;
+  margin-top: 8px;
+}
+
+.product-qty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.qty-btn {
+  background: none;
+  border: 1px solid var(--border);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1;
+}
+
+.qty-btn:hover { border-color: var(--border-dark); }
+
+.qty-value {
+  font-size: 14px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ==========================================================
    PRODUCT CARD — BUTTON
    ========================================================== */
 

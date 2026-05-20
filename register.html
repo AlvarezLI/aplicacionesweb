@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NUVEA — Crear cuenta</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <script src="js/auth.js"></script>
-  <script>
-    if (isLoggedIn()) window.location.replace('index.html');
-  </script>
 </head>
 <body>
 
@@ -16,7 +12,6 @@
     <a href="gate.html" class="nav-brand">
       <svg class="nav-logo" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="28" height="28" rx="3" fill="#1A1917"/><path d="M7 8v12M7 8l14 12M21 8v12" stroke="#FAFAF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        
       </svg>
       <span class="nav-brand-name">uvea</span>
     </a>
@@ -139,9 +134,7 @@
     </div>
   </main>
 
-  <!-- ====================================================
-       MODAL DE ÉXITO
-       ==================================================== -->
+  <!-- MODAL DE ÉXITO -->
   <div class="modal-overlay" id="successModal" aria-modal="true" role="dialog">
     <div class="modal">
       <div class="modal-check" aria-hidden="true">&#10003;</div>
@@ -154,18 +147,21 @@
     </div>
   </div>
 
+  <script src="js/auth.js"></script>
   <script>
+    if (isLoggedIn()) window.location.replace('index.html');
+
+    initNav();
+
     document.getElementById('registerForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      const errorEl = document.getElementById('registerError');
+      var errorEl   = document.getElementById('registerError');
+      var nombre    = document.getElementById('nombre').value.trim();
+      var apellido  = document.getElementById('apellido').value.trim();
+      var email     = document.getElementById('email').value.trim();
+      var password  = document.getElementById('password').value;
+      var fecha     = document.getElementById('fechaNacimiento').value;
 
-      const nombre   = document.getElementById('nombre').value.trim();
-      const apellido = document.getElementById('apellido').value.trim();
-      const email    = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value;
-      const fecha    = document.getElementById('fechaNacimiento').value;
-
-      /* Validaciones básicas */
       if (!nombre || !apellido) {
         errorEl.textContent = 'Por favor completá nombre y apellido.';
         errorEl.classList.add('visible');
@@ -182,7 +178,7 @@
         return;
       }
 
-      const result = authRegister({ nombre, apellido, email, password, fechaNacimiento: fecha });
+      var result = authRegister({ nombre: nombre, apellido: apellido, email: email, password: password, fechaNacimiento: fecha });
 
       if (result.ok) {
         document.getElementById('successModal').classList.add('active');
@@ -192,9 +188,8 @@
       }
     });
 
-    /* Ocultar error al escribir */
-    ['nombre','apellido','email','password','fechaNacimiento'].forEach(id => {
-      document.getElementById(id).addEventListener('input', () => {
+    ['nombre', 'apellido', 'email', 'password', 'fechaNacimiento'].forEach(function (id) {
+      document.getElementById(id).addEventListener('input', function () {
         document.getElementById('registerError').classList.remove('visible');
       });
     });
