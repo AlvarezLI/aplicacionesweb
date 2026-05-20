@@ -11,9 +11,6 @@
   <!-- NAVBAR (generado por navbar.js) -->
   <nav class="navbar"></nav>
 
-  <!-- ====================================================
-       MAIN
-       ==================================================== -->
   <main>
 
     <!-- Hero -->
@@ -26,7 +23,7 @@
       <a href="pages/moda.html" class="hero-cta">Explorar colección</a>
     </section>
 
-    <!-- Categories -->
+    <!-- Categorías -->
     <section class="categories-section">
       <div class="container">
         <p class="section-label">Categorías</p>
@@ -67,11 +64,16 @@
       </div>
     </section>
 
+    <!-- Destacados (3 productos por categoría traídos con fetch) -->
+    <section class="products-section">
+      <div class="container">
+        <p class="section-label">Destacados</p>
+        <div class="featured-grid products-grid"></div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ====================================================
-       FOOTER
-       ==================================================== -->
   <footer>
     <span class="footer-brand">Nuvea</span>
     <span>&copy; 2026 NUVEA. Todos los derechos reservados.</span>
@@ -80,9 +82,11 @@
   <script src="js/auth.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/navbar.js"></script>
+  <script src="js/productCard.js"></script>
   <script>
     guardAuth();
     renderNavbar();
+    renderFeatured();
   </script>
 
 </body>
