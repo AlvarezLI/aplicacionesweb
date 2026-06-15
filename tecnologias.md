@@ -52,7 +52,6 @@ aplicaciones-web/
 
 ### Módulo 1 — Estructura base
 - Definición del design system con variables CSS (`--bg`, `--accent`, `--text`, `--radius`, etc.)
-- Tipografía editorial: Cormorant Garamond para títulos, DM Sans para cuerpo
 - Layout multi-página con navegación entre categorías
 - Grilla de productos responsive con CSS puro
 
