@@ -1,10 +1,10 @@
 /* NUVEA — Navbar Component */
 
 const NAV_PAGES = [
-  { href: 'index.html',             label: 'Inicio' },
-  { href: 'pages/moda.html',        label: 'Moda' },
-  { href: 'pages/electronica.html', label: 'Electrónica' },
-  { href: 'pages/hogar.html',       label: 'Hogar' },
+  { href: 'index.html',       label: 'Inicio' },
+  { href: 'moda.html',        label: 'Moda' },
+  { href: 'electronica.html', label: 'Electrónica' },
+  { href: 'hogar.html',       label: 'Hogar' },
 ];
 
 function renderNavbar() {
