@@ -7,7 +7,7 @@ function createProductCard(product) {
 
   card.innerHTML =
     '<div class="product-img">' +
-      '<img src="' + root + product.img + '" alt="' + product.title + '" loading="lazy" />' +
+      '<img src="../' + product.img + '" alt="' + product.title + '" loading="lazy" />' +
     '</div>' +
     '<span class="product-tag">' + product.tag + '</span>' +
     '<h3 class="product-name">' + product.title + '</h3>' +
@@ -58,7 +58,7 @@ function renderProducts(category) {
   var grid = document.querySelector('.products-grid');
   if (!grid) return;
 
-  fetch(_root() + 'data/products.json')
+  fetch('../data/products.json')
     .then(function (response) {
       return response.json();
     })
@@ -75,7 +75,7 @@ function renderFeatured() {
   var grid = document.querySelector('.featured-grid');
   if (!grid) return;
 
-  fetch(_root() + 'data/products.json')
+  fetch('../data/products.json')
     .then(function (response) {
       return response.json();
     })

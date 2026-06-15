@@ -51,7 +51,7 @@ function guardAuth() {
 
 /* Ruta raíz relativa según profundidad de la página */
 function _root() {
-  return '../';
+  return '';
 }
 
 function _getUsers() {
